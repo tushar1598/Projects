@@ -1,0 +1,244 @@
+<head>
+    <title>
+        <%= title %>
+
+    </title>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
+</head>
+
+
+<%- include("_header")%>
+
+
+
+    <div id="data">
+        <div id="student-data">
+            <h2>Students</h2>
+            <!-- student -->
+            <%for(let std of student) {%>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                aria-expanded="false" aria-controls="collapseThree" data-bs-target=#`<%=std._id %>` >
+                                <span>
+                                    <%= std.name %>
+                                </span>
+
+                            </button>
+                        </h2>
+                        <div id=`<%=std._id %>` class="accordion-collapse collapse" data-bs-parent="#accordionExample" >
+                            <div class="accordion-body">
+                                <!-- start -->
+                                <div class="flex">
+                                    <div>Name</div>
+                                    <div class="data">
+                                        <%= std.name%>
+                                    </div>
+                                </div>
+
+                                <div class="flex">
+                                    <div>Email</div>
+                                    <div class="data">
+                                        <%= std.email%>
+                                    </div>
+                                </div>
+
+                                <div class="flex">
+                                    <div>Collage</div>
+                                    <div class="data">
+                                        <%= std.collage%>
+                                    </div>
+                                </div>
+
+                                <div class="flex">
+                                    <div>Batch</div>
+                                    <div class="data">
+                                        <%=std.batch%>
+                                    </div>
+                                </div>
+
+                                <div class="flex">
+                                    <div>Placement Status</div>
+                                    <div class="data">
+                                        <%= std.placement_status%>
+                                    </div>
+                                </div>
+
+                                <div class="flex">
+                                    <div>DSA Score</div>
+                                    <div class="data">
+                                        <%=std.DSA_Score%>
+                                    </div>
+                                </div>
+
+                                <div class="flex">
+                                    <div>React Score</div>
+                                    <div class="data">
+                                        <%=std.React_Score%>
+                                    </div>
+                                </div>
+
+                                <div class="flex">
+                                    <div>Web Score</div>
+                                    <div class="data">
+                                        <%=std.Web_Score%>
+                                    </div>
+                                </div>
+                                <!-- end -->
+
+                                <div id="btn">
+
+
+
+                                    <a href="/students/update/<%= std._id %>">
+                                        <button
+                                            style="background-color: rgb(3, 3, 150); color: white; border: none; padding: 8px; width: 130px;">Edit</button>
+                                    </a>
+                                    <a href="/students/delete/<%= std._id %>">
+                                        <button
+                                            style="background-color: rgb(203, 7, 7); color: white; border: none; padding: 8px; width: 130px;">Delete</button>
+                                    </a>
+
+                                </div>
+                                <hr>
+                                <h3>Interviews</h3>
+                                <div id="itvw">
+                                    <b>Company</b>
+                                    <b>Date</b>
+                                    <b>Result</b>
+                                </div>
+
+                                <% for(let result of std.interviews ) {%>
+                                    <div id="itvw1">
+                                        <p>
+                                            <%= result.company %>
+                                        </p>
+                                        <p>
+                                            <%= result.date %>
+                                        </p>
+                                        <p>
+                                            <%= result.result %>
+                                        </p>
+                                    </div>
+
+                                    <%}%>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+                    <!-- student -->
+        </div>
+
+
+
+
+        <div id="interview-data">
+
+            <!-- interview -->
+            <h2>Company</h2>
+
+            <% for(let itvw of interview) {%>
+
+                <div class="accordion" id="accordionExample">
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target=#`<%=itvw._id %>` aria-expanded="false" aria-controls="collapseThree">
+                                <span>
+                                    <%= itvw.company %>
+                                </span>
+                            </button>
+                        </h2>
+                        <div id=`<%=itvw._id %>` class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <!-- start -->
+
+                                <div class="company">
+                                    <div class="c">Company</div>
+                                    <div class="d">
+                                        <%= itvw.company %>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="company">
+                                    <div class="c">Date</div>
+                                    <div class="d">
+                                        <%= itvw.date %>
+                                    </div>
+                                </div>
+                                <hr>
+                                <!-- end -->
+
+                                <h5>Enrolled Students</h5>
+
+                                <div id="parent-add-student">
+                                    <h6>Add Students</h6>
+                                    <div>
+                                        <form id="add" action="/interviews/result/<%= itvw._id %>" method="post">
+
+                                            <label for="">Student Email</label>
+                                            <input type="email" name="email" placeholder="Enter email" required>
+                                            <label for="">Result</label>
+
+                                            <select name="result" id="">
+                                                <option selected>PASS</option>
+                                                <option>FAIL</option>
+                                                <option>On Hold</option>
+                                                <option>Didn't attempt</option>
+                                            </select>
+                                            <input id="add-std" type="submit" value="Add Student">
+
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <%}%>
+
+
+                    <!-- interview -->
+
+        </div>
+    </div>
+
+    <%- include("_footer")%>
+
+
+
+        <script>
+
+         <% if (flash.success && flash.success.length > 0) {%>
+
+                new Noty({
+                    theme: "relax",
+                    text: "<%= flash.success %>",
+                    type: "success",
+                    layout: "topRight",
+                    timeout: 1500
+
+                }).show();
+
+
+         <%}%>
+
+
+
+
+
+        </script>

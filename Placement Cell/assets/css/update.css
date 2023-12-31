@@ -1,0 +1,89 @@
+#parent-update {
+    width: 630px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 25px auto;
+    height: 510px;
+    border: 1px solid white;
+
+}
+
+#parent-update>form {
+
+    width: 580px;
+    display: grid;
+    margin: 30px auto;
+    margin-right: 0px;
+
+
+}
+
+form input {
+    margin: 5px;
+    margin-top: 12px;
+    padding: 5px;
+    width: 90%;
+    color: rgb(97, 93, 93);
+}
+
+
+
+#place-bat {
+    display: flex;
+    width: 91.5%;
+}
+
+#place-bat>div {
+    width: 50%;
+
+}
+
+#place-bat input {
+    width: 95%;
+    position: relative;
+    left: 5px;
+
+
+}
+
+
+#a {
+    position: relative;
+    left: 5px;
+}
+
+#place-bat select {
+    width: 95%;
+    height: 38px;
+    margin-top: 12px;
+    margin-left: 5px;
+    color: rgb(97, 93, 93);
+
+}
+
+#marks {
+    display: flex;
+    width: 93%;
+}
+
+label {
+    font-weight: 700;
+    margin-left: 5px;
+    position: relative;
+    top: 5px;
+
+}
+
+
+#btn {
+
+    width: 24%;
+    background-color: teal;
+    border: none;
+    color: white;
+    padding: 6px;
+    position: relative;
+    left: 192px;
+    top: 10px;
+    border-radius: 5px;
+
+}

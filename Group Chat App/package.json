@@ -1,0 +1,37 @@
+{
+  "name": "dummycodeial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-mysql-session": "^3.0.0",
+    "express-session": "^1.17.3",
+    "fast-csv": "^4.3.6",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.6.2",
+    "nodemailer": "^6.9.7",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "razorpay": "^2.9.2",
+    "sendinblue-api": "^1.0.8",
+    "sequelize": "^6.33.0",
+    "sib-api-v3-sdk": "^8.5.0",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.1"
+  }
+}

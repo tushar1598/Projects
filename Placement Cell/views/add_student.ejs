@@ -1,0 +1,96 @@
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/add_student.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+</head>
+
+
+<%- include("_header")%>
+
+    <h2>Add Student</h2>
+
+    <% if(locals.user){ %>
+
+        <div id="parent">
+
+
+
+            <form action="/students/Create" method="post">
+
+                <label class="nce" for="">Name</label>
+                <input id="name" type="text" name="name" placeholder="Enter student name" required>
+                <label class="nce" for="">Email</label>
+                <input type="email" name="email" placeholder="Enter student email" required>
+                <label class="nce" for="">Collage</label>
+                <input type="text" name="collage" placeholder="Enter student collage" required>
+                <div id="batplace">
+
+
+                    <div>
+                        <label for="">Placement Status</label>
+                        <select name="placement_status" id="">
+                            <option selected>Not Placed</option>
+                            <option>Placed</option>
+                        </select>
+                    </div>
+
+                    <div>
+
+                        <label for="name">Batch</label>
+                        <input type="number" name="batch" placeholder="Enter batch no." required>
+
+                    </div>
+
+                </div>
+                <div id="marks-lable">
+                    <label id="right" for="name">DSA Score</label>
+                    <label id="mid" for="name">React Score</label>
+                    <label id="left" for="name">Web Score</label>
+
+                </div>
+
+                <div id="marks">
+
+
+                    <input type="number" name="DSA_Score" placeholder="" required>
+
+                    <input type="number" name="React_Score" placeholder="" required>
+
+                    <input type="number" name="Web_Score" placeholder="" required>
+
+                </div>
+
+
+
+                <input id="btn" type="submit" value="Add Student">
+
+            </form>
+
+        </div>
+
+
+        <% } %>
+
+            <%- include("_footer")%>
+
+
+                <script>
+
+                <% if (flash.success && flash.success.length > 0) {%>
+
+                        new Noty({
+                            theme: "relax",
+                            text: "<%= flash.success %>",
+                            type: "success",
+                            layout: "topRight",
+                            timeout: 1500
+
+                        }).show();
+                
+                
+                <%}%>
+
+                </script>

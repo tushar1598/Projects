@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.display-1{
+
+    font-size: 25px;
+}
+
+body {
+    width: 100%;
+    background-color:#27292a;
+    
+}
+
+
+#heading {
+    margin-top: 100px;
+    color: rgb(132, 128, 128);
+}
+
+
+
+#nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #e94d5c;
+
+}
+
+
+#search-bar {
+    max-width: 600px;
+    
+   
+}
+
+#search-bar input {
+    height: 50px;
+    border-radius: 20px;
+  
+}
+
+
+
+#card {
+    background-color: #e94d5c;
+    padding: 10px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 370px;
+  
+}
+
+#card img {
+    border-radius: 50%;
+    width: 70%;
+    position: relative;
+    left: 40px;
+    top: 10px;
+}
+
+
+
+#meal-details{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color:#e94d5c ;
+}
+#meal-header{
+    width: 70%;
+    margin: auto;
+}
+#meal-thumbail img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+#details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    color: white;
+}
+#meal-instruction{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+
+
+
+
+#favourites-body{
+    background-color:#27292a ;
+    
+}
+
+
+
+.card-title{
+    text-align: center;
+    position: relative;
+    top: 10px;
+    font-size: 16px;
+    top: 20px;
+}
+
+.offcanvas-header{
+    background-color: #e94d5c;
+}
+
+#btn{
+
+
+    position: relative;
+    left: 70px;
+
+
+}
+
+.btn{
+    margin-bottom: 10px;
+}
+
+

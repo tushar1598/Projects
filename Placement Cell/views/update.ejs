@@ -1,0 +1,91 @@
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/update.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+</head>
+
+
+
+
+<%- include("_header")%>
+
+
+
+
+    <div id="parent-update">
+        <form action="/students/edit/<%= student._id %>" method="post">
+            <label for="">Update Name</label>
+            <input type="text" name="name" value="<%= student.name %>" required>
+            <label for="">Update Email</label>
+            <input type="email" name="email" value="<%= student.email %>" required>
+            <label for="">Update Collage</label>
+            <input type="text" name="collage" value="<%= student.collage %>" required>
+
+            <div id="place-bat">
+
+                <div>
+                    <label for="">Update Status</label>
+                    <select name="placement_status" id="" required>
+                        <option>Select New Status</option>
+                        <option value="Not Placed">Not Placed</option>
+                        <option value="Placed">Placed</option>
+                    </select>
+                </div>
+                <div>
+                    <label id="a" for="">Update Batch</label>
+                    <input type="number" name="batch" value="<%= student.batch %>" required>
+                </div>
+
+            </div>
+
+            <div id="marks">
+                <div>
+                    <label for="">Update DSA Score</label>
+                    <input type="number" name="DSA_Score" value="<%= student.DSA_Score %>" required>
+                </div>
+                <div>
+                    <label for="">Update React Score</label>
+                    <input type="number" name="React_Score" value="<%= student.React_Score %>" required>
+                </div>
+                <div>
+                    <label for="">Update Web Score</label>
+                    <input type="number" name="Web_Score" value="<%= student.Web_Score %>" required>
+                </div>
+
+            </div>
+
+
+            <input id="btn" type="submit" value="Update">
+        </form>
+    </div>
+
+
+
+
+
+
+    <%- include("_footer")%>
+
+
+
+
+        <script>
+
+        <% if (flash.success && flash.success.length > 0) {%>
+
+                new Noty({
+                    theme: "relax",
+                    text: "<%= flash.success %>",
+                    type: "success",
+                    layout: "topRight",
+                    timeout: 1500
+
+                }).show();
+        
+        
+        <%}%>
+
+        </script>

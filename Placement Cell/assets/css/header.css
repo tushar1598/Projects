@@ -1,0 +1,43 @@
+#nav {
+  display: flex;
+  gap: 25px;
+  font-size: 17px;
+}
+
+
+#Placement-cell {
+  font-weight: 600;
+}
+
+#img {
+  width: 13px;
+  position: relative;
+  left: -5px;
+  top: 3px;
+}
+
+p a {
+  color: black;
+  text-underline-offset: none;
+  font-weight: 600;
+  position: relative;
+  top: 5px;
+  left: -8px;
+  text-decoration: none;
+}
+
+#username {
+  position: relative;
+  left: -2px;
+  top: 1px;
+  font-weight: 600;
+}
+
+.container-fluid {
+
+  background-color: rgb(238, 175, 75);
+  height: 60px;
+  position: relative;
+  top: -10px;
+
+}

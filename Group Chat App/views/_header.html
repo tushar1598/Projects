@@ -1,0 +1,40 @@
+<head>
+    <link rel="stylesheet" href="/css/_header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">iChat</label>
+    <ul>
+        <% if(locals.user){%>
+            
+            <li>
+                <a style="width: 300px;" href="/users/profile">
+                    <!-- <img style="width: 15px; height: 15px; position: relative; top: 2px; left: 2px; "
+                        src="  https://cdn-icons-png.flaticon.com/128/149/149071.png" alt=""> -->
+                    <%= locals.user.name %>
+                </a>
+            </li>
+            <li>
+                <a href="/users/destroy">Log-out</a>
+            </li>
+        <% }else {%>
+                <li>
+                    <a href="/"> <img style="width: 15px; height: 15px; position: relative; top: 1px; right: 2px;"
+                            src="https://cdn-icons-png.flaticon.com/128/263/263115.png" alt="">Home</a>
+                </li>
+                <li>
+                    <a href="/users/sign-up">sign-up</a>
+                </li>
+                <li>
+                    <a href="/users/sign-in">sign-in</a>
+                </li>
+        <%}%>
+    </ul>
+</nav>
+<section></section>

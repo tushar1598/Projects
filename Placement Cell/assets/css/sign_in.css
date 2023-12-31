@@ -1,0 +1,49 @@
+#sign-in-form {
+    display: grid;
+    width: 33%;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 50px auto;
+    height: 450px;
+}
+
+#acount {
+    text-align: center;
+    position: relative;
+    top: -5px;
+}
+
+#acount a {
+    position: relative;
+    top: -1px;
+    left: 4px;
+}
+
+h2 {
+    text-align: center;
+    position: relative;
+    top: -14px;
+}
+
+img {
+    width: 20%;
+    margin-left: 180px;
+    margin-top: 10px;
+}
+
+form {
+    display: grid;
+    width: 70%;
+    margin: auto;
+    gap: 30px;
+    position: relative;
+    top: -20px;
+}
+
+
+form>input {
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border-width: 1px;
+}

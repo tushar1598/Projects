@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" href="/css/sign_in.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+</head>
+
+
+<%- include("_header")%>
+    <div id="sign-in-form">
+        <img src="https://yt3.googleusercontent.com/kv5nH1CBnmIJ-1g2hmmTm_GekJfaYothHb1HmgAU8IB9zdu3y7vVVtCTEGPqs_dHbr0XEB_anyM=s900-c-k-c0x00ffffff-no-rj"
+            alt="">
+        <h2>Sign in</h2>
+        <form action="/users/create-session" method="post">
+            <input type="email" name="email" placeholder="Email or username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input style="background-color: teal; color: white; border: none;" type="submit" value="Sign-in">
+        </form>
+        <p id="acount">
+            Don't have an account? <a href="/users/sign-up">sign-up</a>
+        </p>
+
+    </div>
+
+    <%- include("_footer")%>
+
+
+
+
+
+<script>
+
+<% if (flash.success && flash.success.length > 0) {%>
+
+                new Noty({
+                    theme: "relax",
+                    text: "<%= flash.success %>",
+                    type: "success",
+                    layout: "topRight",
+                    timeout: 1500
+
+                }).show();
+
+
+<%}%>
+
+</script>

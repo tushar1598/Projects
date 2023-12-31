@@ -1,0 +1,200 @@
+
+.flex {
+
+    display: flex;
+    gap: 80px;
+
+}
+
+#data {
+    display: flex;
+    gap: 100px;
+}
+
+#accordionExample {
+    width: 550px;
+    margin: 30px;
+}
+
+
+.company {
+    display: flex;
+    gap: 150px;
+    margin-left: 30px;
+    width: 90%;
+
+
+
+}
+
+.c {
+
+    font-size: 20px;
+    color: grey;
+    font-weight: 600;
+
+}
+
+.d {
+    font-size: 20px;
+    color: purple;
+    font-weight: 600;
+}
+
+
+.company>div {
+    text-align: left;
+    width: 50%;
+
+}
+
+#btn {
+    display: flex;
+    gap: 70px;
+    margin-left: 70px;
+    margin-top: 30px;
+
+}
+
+#btn button {
+    border-radius: 5px;
+}
+
+h3 {
+
+    text-align: center;
+}
+
+#itvw {
+
+    display: flex;
+    gap: 50px;
+    background-color: grey;
+    height: 40px;
+}
+
+#itvw b {
+
+    margin: auto;
+    width: 30%;
+    text-align: center;
+}
+
+#add-std {
+    background-color: rgb(167, 60, 152);
+    border-radius: 5px;
+    border: none;
+    margin: 10px auto;
+    width: 130px;
+    height: 40px;
+    color: white;
+}
+
+#itvw1 {
+    display: flex;
+    height: 35px;
+    gap: 50px;
+    margin-top: 5px;
+    background-color: rgb(222, 225, 225);
+
+}
+
+#itvw1 p {
+    width: 30%;
+    margin: 6px auto;
+
+    text-align: center;
+}
+
+.flex>div {
+    padding: 7px;
+    margin-left: 20px;
+    width: 50%;
+
+}
+
+.flex:nth-child(1) {
+    background-color: rgb(185, 174, 174);
+}
+
+.flex:nth-child(2) {
+    background-color: rgb(236, 231, 231);
+}
+
+.flex:nth-child(3) {
+    background-color: rgb(185, 174, 174);
+}
+
+.flex:nth-child(4) {
+    background-color: rgb(236, 231, 231);
+}
+
+.flex:nth-child(5) {
+    background-color: rgb(185, 174, 174);
+}
+
+.flex:nth-child(6) {
+    background-color: rgb(236, 231, 231);
+}
+
+.flex:nth-child(7) {
+    background-color: rgb(185, 174, 174);
+}
+
+.flex:nth-child(8) {
+    background-color: rgb(236, 231, 231);
+}
+
+
+
+#add {
+    display: grid;
+    gap: 10px;
+    width: 90%;
+    margin: 30px auto;
+
+}
+
+#add>input {
+    padding: 5px;
+
+}
+
+#add select {
+    padding: 5px;
+}
+
+h6 {
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
+
+h5 {
+    text-align: center;
+}
+
+#parent-add-student {
+    border: 1px solid rgb(221, 209, 209);
+    height: 280px;
+    margin: 30px auto;
+}
+
+
+span {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    color: rgb(131, 131, 226);
+}
+
+#parent-add-student label{
+
+    font-weight: 500;
+
+
+}
+
+h2{
+    text-align: center;
+}

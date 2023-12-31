@@ -1,0 +1,57 @@
+
+#parent {
+    /* border: 1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    width: 490px;
+    margin: 70px auto;
+    height: 280px;
+}
+#parent > form{
+    display: grid;
+    gap:20px;
+    
+    width: 400px;
+    margin: 12px auto;
+}
+
+h2{
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+
+label{
+    position: relative;
+    top: 12px;
+    font-weight: 700;
+
+}
+#date{
+    margin-top: -20px;
+}
+
+#dt{
+    position: relative;
+    top: -5px;
+}
+#btn{
+    padding: 5px;
+    background-color: rgb(30, 30, 192);
+    color: white;
+    width: 130px;
+    border: none;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+
+form input{
+    padding: 5px;
+}
+form{
+   
+   position: relative;
+   top: 22px;
+}
