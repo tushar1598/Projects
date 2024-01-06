@@ -1,0 +1,131 @@
+#expense-details {
+    border: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 500px;
+    height: 400px;
+
+}
+
+#expense-details form {
+    display: grid;
+    width: 80%;
+    margin: 30px auto;
+    gap: 20px;
+}
+
+#expense-details label {
+    font-weight: 600;
+    position: relative;
+    top: 10px;
+}
+
+#expense-details input,
+select {
+    padding: 9px;
+    outline: none;
+}
+
+#btn1 {
+    margin-top: 12px;
+    width: 120px;
+    color: white;
+    background-color: teal;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#btn {
+    position: relative;
+    top: -122px;
+    left: 435px;
+    width: 120px;
+    color: white;
+    background-color: rgb(5, 107, 5);
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#parent {
+    display: flex;
+    gap: 120px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+#expense-table {
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+#expense-table table {
+    width: 400px;
+    text-align: center;
+}
+
+table th {
+    background-color: teal;
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 8px;
+}
+
+#delete {
+    background-color: red;
+}
+
+#delete a {
+    color: white;
+
+}
+
+#delete a:hover {
+    background-color: red;
+}
+
+#pagination {
+    background-color: white;
+    position: relative;
+    width: 100px;
+    margin: 10px;
+    margin-left: 140px;
+    display: flex;
+    gap: 10px;
+}
+
+#pagination button {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.abc {
+    width: 24px;
+    cursor: pointer;
+}
+
+#download {
+    width: 150px;
+    padding: 5px;
+    position: relative;
+    top: -118px;
+    left: 425px;
+}
+
+#download button {
+    padding: 11px;
+    width: 125px;
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+
+
+

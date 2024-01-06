@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="/css/home.css">
+    <title><%= title %></title>
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create your new table</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="parent">
+                        <form id="form" method="post" action="/create-table">
+                            <label id="table-name-lable" class="size" for="">Table Name</label>
+                            <div id="table-name">
+                                <input type="text" name="table_name" placeholder="Table Name" required>
+                            </div>
+                            <div id="columns">
+                                <div id="lable">
+                                    <label id="field-lable" class="size" for="">Field</label>
+                                    <label id="type-lable" class="size" for="">Type</label>
+                                </div>
+                                <div class="column">
+                                    <input type="text" name="column_name[]" placeholder="Field Name" required>
+                                    <select name="data_type[]">
+                                        <option value="">Choose type</option>
+                                        <option value="INT">INTEGER</option>
+                                        <option value="DOUBLE">DOUBLE</option>
+                                        <option value="VARCHAR(255)">STRING</option>
+                                        <option value="DATE">DATE</option>
+                                        <!-- Add more data types as needed -->
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" id="add_column">Add Another Field</button>
+                            <input id="create-table" type="submit" value="Create Table">
+                        </form>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="parent">
+        <div id="left-side">
+            <% for(let i of tables) {%>
+                <h4>
+                    <% if(i){%>
+                        <a id="tables" href="/?name=<%= i %>">
+                            <%= (i) %> 
+                            <hr>
+                        </a>
+                    <%}%>
+                </h4>
+            <%}%>
+                    <!-- Button trigger modal -->
+                    <button id="btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Create New Table
+                    </button>
+        </div>
+        <div id="right-side">
+            <!-- append your table data -->
+            <table>
+                <thead>
+                    <tr>
+                        <% if(tableField) {%>
+                            <% for(let i of tableField) {%>
+                                <th>
+                                    <%= i.Field %>
+                                </th>
+                            <%}%>
+                                <th>Delete</th>
+                        <%}%>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if(tableField) {%>
+                        <% for(let i of tableData) {%>
+                            <tr>
+                                <% for(let key in i) {%>
+
+                                    <% if(key==="CreatedAt" || key==="UpdatedAt" ) {%>
+                                        <td>
+                                            <%= i[key].toLocaleString() %>
+                                        </td>
+                                    <%}else{%>
+                                        <td>
+                                            <%= i[key] %>
+                                        </td>
+                                    <%}%>
+                                <%}%>
+                                    <td id=delete><a href="/delete-data/<%= tableName %>/<%= i.id %>">Delete</a></td>
+                            </tr>
+                        <%}%>
+                    <%}%>
+                </tbody>
+            </table>
+
+        </div>
+        <div id="add-data">
+            <!-- Button trigger modal -->
+            <button id="add-data" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                Add Data
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Add your data</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="/create-table-data/<%= tableName %>" method="post">
+                                <% if(tableField) {%>
+                                    <% for(let i of tableField) {%>
+                                        <% if(i.Field==="CreatedAt" || i.Field==="UpdatedAt" ) {%>
+                                            <input type="hidden" name="<%= i.Field %>" value="<%= Time %>">
+                                        <%}else{%>
+                                            <input type=" <%=i.Type %>" name="<%= i.Field %>" required placeholder="<%=i.Field %>">
+                                        <%}%>
+                                    <%}%>
+                                        <input id="submit" type="submit" value="Submit">
+                                <%}%>
+                            </form>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="/js/home.js"></script>

@@ -1,0 +1,29 @@
+h2 {
+    text-align: center;
+    margin: 20px;
+}
+
+#expense-table table {
+    width: 400px;
+    text-align: center;
+}
+
+table th {
+    background-color: teal;
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 8px;
+}
+
+#expense-table {
+    margin: -10px auto;
+    width: 400px;
+}
+
+#space{
+    height: 20px;
+}

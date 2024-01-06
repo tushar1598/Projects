@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Create MySQL Table</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+
+    <h1>Create Your Table</h1>
+
+    <div id="parent">
+        <form method="post" action="/create-table">
+            <div id="table-name">
+                <label for="table_name">Table Name</label>
+                <input type="text" name="table_name" placeholder="Table Name" required>
+            </div>
+            <label class="type" for="">Field Name</label>
+            <label id="type" class="type" for="">Type</label>
+            <div id="columns">
+                <div class="column">
+                    <input type="text" name="column_name[]" placeholder="Field Name" required>
+                    <select name="data_type[]">
+                        <option value="">Choose type</option>
+                        <option value="INT">INT</option>
+                        <option value="DOUBLE">DOUBLE</option>
+                        <option value="VARCHAR(255)">VARCHAR(255)</option>
+                        <option value="DATE">DATE</option>
+                        <!-- Add more data types as needed -->
+                    </select>
+                </div>
+            </div>
+            <button type="button" id="add_column">Add Another Field</button>
+            <br><br>
+            <input id="create-table" type="submit" value="Create Table">
+        </form>
+        <p></p>
+    </div>
+
+</body>
+
+</html>
+
+<script src="/js/home.js"></script>

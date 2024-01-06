@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <%- include("_header.html") %>
+        <% if(locals.user) {%>
+            <h2>Day to Day</h2>
+            <div id="expense-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Description</th>
+                            <th>Income</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- append your output here -->
+                        <% for(let i of expenses) {%>
+                            <% if(locals.user.id==i.userId) {%>
+                                <tr>
+                                    <td>
+                                        <%= i.amount %>
+                                    </td>
+                                    <td>
+                                        <%= i.description %>
+                                    </td>
+                                    <td>50000</td>
+                                    <td>
+                                        <%= i.category %>
+                                    </td>
+                                </tr>
+                            <%}%>
+                        <%}%>
+                                <tr>
+                                    <td><b>Savings</b></td>
+                                    <td colspan="3">50000 - <span id="exp"></span> = <span id="sav"></span></td>
+                                </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="space"></p>
+
+
+            <h2>Yearly</h2>
+            <div id="expense-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Income</th>
+                            <th>Expenses</th>
+                            <th>Savings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>November</b></td>
+                            <td>600000</td>
+                            <td id="exp1"></td>
+                            <td id="sav1"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <%}else{%>
+                <h2>Home Page</h2>
+            <%}%>
+
+                    <% if(locals.user) {%>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+                            integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+                            crossorigin="anonymous" referrerpolicy="no-referrer">
+                            </script>
+
+                        <script>
+                            axios.get("http://localhost:9000/expenses/total-expense").then((res) => {
+                                let totalAmount = 0;
+                                for (let i of res.data.expense) {
+                                    totalAmount += Number(i.amount)
+                                }
+                                document.querySelector("#exp").innerHTML = totalAmount
+                                document.querySelector("#sav").innerHTML = (50000 - totalAmount)
+                            })
+                            axios.get("http://localhost:9000/expenses/total-expense").then((res) => {
+                                let totalAmount = 0;
+                                for (let i of res.data.expense) {
+                                    totalAmount += Number(i.amount)
+                                }
+                                document.querySelector("#exp1").innerHTML = totalAmount
+                                document.querySelector("#sav1").innerHTML = (600000 - totalAmount)
+                            })
+                        </script>
+                    <%}%>
+
+</body>
+
+</html>

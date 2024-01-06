@@ -1,0 +1,60 @@
+form {
+    display: grid;
+    gap: 20px;
+}
+
+form input {
+    padding: 5px;
+    border: 1 px solid white;
+}
+
+#submit {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+table {
+    margin-left: 360px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+th {
+    padding: 10px;
+    width: 130px;
+    color: white;
+    background-color: teal;
+    padding: 12px;
+}
+
+#btn {
+    margin-left: 1200px;
+    padding: 10px;
+    margin-top: -45px;
+    width: 150px;
+}
+
+td {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    padding: 8px;
+}
+
+#home {
+    background-color: rgb(94, 96, 219);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 120px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#home a {
+    color: white;
+    text-decoration: none;
+}

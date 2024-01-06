@@ -1,0 +1,150 @@
+#parent {
+    display: flex;
+}
+
+#parent form {
+    display: grid;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+#left-side {
+    border: 1px solid black;
+    height: 630px;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 230px;
+}
+
+
+#tables {
+    margin-left: 30px;
+    position: relative;
+    top: 40px;
+    text-decoration: none;
+}
+
+#btn {
+    position: fixed;
+    top: 590px;
+    left: 15px;
+}
+
+#submit {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 5px;
+    width: 130px;
+    border-radius: 5px;
+}
+
+#right-side {
+    margin-left: 35px;
+    height: 630px;
+    border: 1px solid black;
+    width: 880px;
+    margin-top: 5px;
+}
+
+td {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 4px;
+    height: 40px;
+    border: 1px solid white;
+}
+
+th {
+    background-color: teal;
+    color: white;
+    padding: 8px;
+    border: 1px solid white;
+}
+
+table {
+    width: 810px;
+    margin: 33px auto;
+    text-align: center;
+}
+
+#create-table {
+    background-color: teal;
+    color: white;
+    width: 120px;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#form input,
+select {
+    padding: 4px;
+    position: relative;
+    left: 10px;
+    top: -10px;
+}
+
+#form select {
+    padding: 5px;
+    position: relative;
+    left: 20px;
+}
+
+#add-data {
+    margin-left: 10px;
+    margin-top: 15px;
+    padding: 10px;
+    width: 150px;
+}
+
+#add_column {
+    border: none;
+    width: 150px;
+    background-color: white;
+    color: blue;
+    margin-left: -1px;
+    margin-top: -24px;
+}
+
+#columns {
+    display: grid;
+    gap: 13px;
+}
+
+.size {
+    font-weight: 600;
+}
+
+#table-name-lable {
+    position: relative;
+    left: 9px;
+    font-size: 17px;
+}
+
+#field-lable {
+    position: relative;
+    left: 10px;
+    top: -5px;
+    font-size: 17px;
+}
+
+#type-lable {
+    position: relative;
+    left: 177px;
+    top: -5px;
+    font-size: 17px;
+}
+
+.modal-body form input {
+    padding: 5px;
+}
+
+#delete{
+    background-color: rgb(238, 46, 46);
+}
+
+#delete a{
+    text-decoration: none;
+    color: white;
+}

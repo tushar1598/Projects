@@ -1,0 +1,35 @@
+#left-side {
+    border: 0.5px solid rgb(173, 170, 170);
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 60%;
+    margin: 50px auto;
+    background-color: rgb(154, 221, 221);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px;
+    width: 120px;
+    position: relative;
+    top: -7px;
+    background-color: rgb(207, 142, 109);
+    border-radius: 5px;
+    border: none;
+    margin-left: 340px;
+}

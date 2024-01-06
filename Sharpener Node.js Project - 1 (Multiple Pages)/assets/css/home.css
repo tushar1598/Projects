@@ -1,0 +1,85 @@
+#parent {
+    border: 1px solid rgb(233, 222, 224);
+    box-shadow: #fffefe 0px 3px 8px;
+    background-color: rgb(214, 212, 206);
+    width: 500px;
+    margin: 30px auto;
+}
+
+form {
+    margin-left: 20px;
+}
+
+#table-name {
+    display: grid;
+    width: 20%;
+    margin-top: 50px;
+}
+
+input,
+select {
+    padding: 10px;
+    margin-top: 20px;
+    outline: none;
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 10px;
+
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+label {
+    position: relative;
+    top: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#type {
+    position: relative;
+    left: 118px;
+}
+
+select {
+    margin-left: 15px;
+}
+
+#columns {
+    margin-top: 40px;
+}
+
+.type {
+    position: relative;
+    top: 50px;
+}
+
+#create-table {
+    background-color: rgb(133, 79, 233);
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 120px;
+}
+
+p {
+    height: 40px;
+}
+
+#add_column {
+    border: none;
+    color: blue;
+    background-color: rgb(214, 212, 206);
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: -10px;
+}
